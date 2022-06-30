@@ -15,3 +15,6 @@ def pojacaj_grijanje(self):
             self.temperatura > 22
             self.temperature = 22
             print(f"temperatura je pojačana za {self.temperatura} °C.")
+
+
+
