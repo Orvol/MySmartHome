@@ -2,11 +2,6 @@ import tkinter as tk
 from tkinter import BOTTOM, TOP, ttk
 from datetime_utils_moj import *
 from tkinter.colorchooser import askcolor
-import meteo
-from moj_pokusaj_smart_home.meteo import vrijeme
-
-
-
 
 
 
@@ -24,7 +19,7 @@ def create_datetime_frame():
         time_label.after(1000, refresh_time)
 
     datetime_frame = tk.Frame(
-        frame8, width=100, height=50, bg="#282828"
+        root, width=100, height=50, bg="#282828"
     )
     datetime_frame.pack(side=TOP)
 
@@ -62,10 +57,10 @@ frame2 = tk.Frame(notebook, width=400, height=280, bg="#B40431")
 frame3 = tk.Frame(notebook, width=400, height=280, bg="#2E64FE")
 frame4 = tk.Frame(notebook, width=400, height=280, bg="#FFFF00")
 frame5 = tk.Frame(notebook, width=400, height=280, bg="#848484")
-frame6 = tk.Checkbutton(notebook, text= "Vrijeme", command=create_datetime_frame, onvalue=1, offvalue=0)
-frame7 = tk.Button(frame5, text='Odaberite boju', command=change_color).pack(expand=True)
+frame6 = tk.Checkbutton(frame5, text= "Vrijeme", command=create_datetime_frame, onvalue=1, offvalue=0)
+frame7 = tk.Checkbutton(frame5, text='Odaberite boju', command=change_color).pack(expand=True)
 frame8 = tk.Frame(notebook, width=400, height=280, bg="#2EFEF7")
-sat = tk.Button(frame8, text='Vrijeme', command=vrijeme).pack(expand=None)
+
 
 
 
